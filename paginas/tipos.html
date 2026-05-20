@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos - Pokemon DataCenter</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Pokemon DataCenter</h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Início</a></li>
+                    <li><a href="/paginas/pokemon.html">Pokemon</a></li>
+                    <li><a href="/paginas/tipos.html" class="active">Tipos</a></li>
+                    <li><a href="/paginas/treinadores.html">Treinadores</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h2>Lista de Tipos</h2>
+            <a href="/paginas/tipCad.html" class="btn btn-success">+ Novo Tipo</a>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Fraquezas</th>
+                        <th>Resistências</th>
+                        <th>Imunidades</th>
+                        <th>Ações</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela">
+                    <!--
+                    <tr>
+                        <td>Fogo</td>
+                        <td>Água, Pedra, Terra</td>
+                        <td>Fogo, Planta, Gelo, Inseto, Aço, Fada</td>
+                        <td>-</td>
+                        <td><a href="#" class="link">Ver Detalhes</a></td>
+                        <td><a href="#" class="link">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>Água</td>
+                        <td>Planta, Elétrico</td>
+                        <td>Fogo, Água, Gelo, Aço</td>
+                        <td>-</td>
+                        <td><a href="#" class="link">Ver Detalhes</a></td>
+                        <td><a href="#" class="link">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>Planta</td>
+                        <td>Fogo, Gelo, Veneno, Voador, Inseto</td>
+                        <td>Água, Elétrico, Planta, Terra</td>
+                        <td>-</td>
+                        <td><a href="#" class="link">Ver Detalhes</a></td>
+                        <td><a href="#" class="link">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>Elétrico</td>
+                        <td>Terra</td>
+                        <td>Elétrico, Voador, Aço</td>
+                        <td>-</td>
+                        <td><a href="#" class="link">Ver Detalhes</a></td>
+                        <td><a href="#" class="link">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>Normal</td>
+                        <td>Lutador</td>
+                        <td>-</td>
+                        <td>Fantasma</td>
+                        <td><a href="#" class="link">Ver Detalhes</a></td>
+                        <td><a href="#" class="link">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>Voador</td>
+                        <td>Elétrico, Gelo, Pedra</td>
+                        <td>Planta, Lutador, Inseto</td>
+                        <td>Terra</td>
+                        <td><a href="#" class="link">Ver Detalhes</a></td>
+                        <td><a href="#" class="link">Excluir</a></td>
+                    </tr>
+                    -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../js/tipo.js"></script>
+    <script>listar()</script>
+
+    <footer>
+        <div class="container">
+            <p>Desenvolvido por: Henry Barcellos</p>
+        </div>
+    </footer>
+</body>
+
+</html>

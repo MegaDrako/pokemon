@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinadores - Pokemon DataCenter</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Pokemon DataCenter</h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Início</a></li>
+                    <li><a href="/paginas/pokemon.html">Pokemon</a></li>
+                    <li><a href="/paginas/tipos.html">Tipos</a></li>
+                    <li><a href="/paginas/treinadores.html" class="active">Treinadores</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h2>Lista de Treinadores</h2>
+            <a href="/paginas/treiCad.html" class="btn btn-success">+ Novo Treinador</a>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Região</th>
+                        <th>Ano de Início</th>
+                        <th>Detalhar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela">
+                    <!--
+                    <tr>
+                        <td>Red</td>
+                        <td>Kanto</td>
+                        <td>1996</td>
+                        <td><a href="#" class="link">Ver Detalhes</a></td>
+                        <td><a href="#" class="link">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ash Ketchum</td>
+                        <td>Kanto</td>
+                        <td>1997</td>
+                        <td><a href="#" class="link">Ver Detalhes</a></td>
+                        <td><a href="#" class="link">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>Misty</td>
+                        <td>Kanto</td>
+                        <td>1997</td>
+                        <td><a href="#" class="link">Ver Detalhes</a></td>
+                        <td><a href="#" class="link">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>Brock</td>
+                        <td>Kanto</td>
+                        <td>1997</td>
+                        <td><a href="#" class="link">Ver Detalhes</a></td>
+                        <td><a href="#" class="link">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>Gold</td>
+                        <td>Johto</td>
+                        <td>1999</td>
+                        <td><a href="#" class="link">Ver Detalhes</a></td>
+                        <td><a href="#" class="link">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>May</td>
+                        <td>Hoenn</td>
+                        <td>2002</td>
+                        <td><a href="#" class="link">Ver Detalhes</a></td>
+                        <td><a href="#" class="link">Excluir</a></td>
+                    </tr>
+                    -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../js/treinador.js"></script>
+    <script>listar()</script>
+
+    <footer>
+        <div class="container">
+            <p>Desenvolvido por: Henry Barcellos</p>
+        </div>
+    </footer>
+</body>
+
+</html>
