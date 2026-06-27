@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon — Pokédex DataCenter</title>
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        #pokeGrid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        @media (max-width: 1100px) { #pokeGrid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 750px)  { #pokeGrid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px)  { #pokeGrid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body class="client-body">
 
@@ -50,7 +60,7 @@
             <p class="search-count" id="contagem"></p>
         </div>
 
-        <div class="client-card-grid" id="pokeGrid">
+        <div id="pokeGrid">
             <!-- Cards renderizados pelo JS -->
         </div>
     </main>
@@ -117,17 +127,15 @@
             });
 
             const cont = document.getElementById('contagem');
-            if (termo) {
-                cont.textContent = `${filtrados.length} resultado(s) para "${termo}"`;
-            } else {
-                cont.textContent = `${pokemons.length} Pokémon cadastrado(s)`;
-            }
+            cont.textContent = termo
+                ? `${filtrados.length} resultado(s) para "${termo}"`
+                : `${pokemons.length} Pokémon cadastrado(s)`;
 
             const grid = document.getElementById('pokeGrid');
 
             if (filtrados.length === 0) {
                 grid.innerHTML = `
-                    <div class="empty-state">
+                    <div class="empty-state" style="grid-column:1/-1">
                         <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="80" height="80" style="opacity:0.3">
                             <circle cx="40" cy="40" r="38" fill="none" stroke="#941d1d" stroke-width="3"/>
                             <path d="M2 40 Q2 2 40 2 Q78 2 78 40 Z" fill="#941d1d" opacity="0.4"/>

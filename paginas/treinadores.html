@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treinadores — Pokédex DataCenter</title>
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        #treiGrid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        @media (max-width: 1100px) { #treiGrid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 750px)  { #treiGrid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px)  { #treiGrid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body class="client-body">
 
@@ -50,7 +60,7 @@
             <p class="search-count" id="contagem"></p>
         </div>
 
-        <div class="client-card-grid trainers-grid" id="treiGrid">
+        <div id="treiGrid">
             <!-- Cards renderizados pelo JS -->
         </div>
     </main>
@@ -94,8 +104,8 @@
         function expLevel(anoIni) {
             const anos = new Date().getFullYear() - parseInt(anoIni);
             if (isNaN(anos) || anos < 0) return '';
-            if (anos < 2) return '🌱 Novato';
-            if (anos < 5) return '⚡ Intermediário';
+            if (anos < 2)  return '🌱 Novato';
+            if (anos < 5)  return '⚡ Intermediário';
             if (anos < 10) return '🔥 Experiente';
             if (anos < 20) return '💎 Veterano';
             return '👑 Lendário';
@@ -122,7 +132,7 @@
             const grid = document.getElementById('treiGrid');
 
             if (filtrados.length === 0) {
-                grid.innerHTML = `<div class="empty-state"><p>Nenhum treinador encontrado.</p></div>`;
+                grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1"><p>Nenhum treinador encontrado.</p></div>`;
                 return;
             }
 
