@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex DataCenter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="client-body">
+
+    <header class="client-header">
+        <div class="client-header-inner container">
+            <div class="client-logo">
+                <svg class="pokeball-logo" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="19" fill="white" stroke="#ccc" stroke-width="1"/>
+                    <path d="M1 20 Q1 1 20 1 Q39 1 39 20 Z" fill="#e63946"/>
+                    <rect x="1" y="18" width="38" height="4" fill="#1a1a2e"/>
+                    <circle cx="20" cy="20" r="6" fill="white" stroke="#1a1a2e" stroke-width="2.5"/>
+                    <circle cx="20" cy="20" r="3" fill="#e63946"/>
+                </svg>
+                <span>Pokédex DataCenter</span>
+            </div>
+            <nav class="client-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="paginas/pokemon.html">Pokémon</a></li>
+                    <li><a href="paginas/tipos.html">Tipos</a></li>
+                    <li><a href="paginas/treinadores.html">Treinadores</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg-balls">
+            <div class="bg-ball b1"></div>
+            <div class="bg-ball b2"></div>
+            <div class="bg-ball b3"></div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Explore o Mundo Pokémon</h1>
+            <p class="hero-subtitle">Consulte informações completas sobre Pokémon, tipos e treinadores do nosso banco de dados.</p>
+            <div class="hero-stats" id="heroStats">
+                <div class="hero-stat">
+                    <span class="stat-number" id="statPoke">—</span>
+                    <span class="stat-label">Pokémon</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" id="statTipo">—</span>
+                    <span class="stat-label">Tipos</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" id="statTrei">—</span>
+                    <span class="stat-label">Treinadores</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container client-main">
+        <h2 class="section-title">O que você quer explorar?</h2>
+        <div class="explore-grid">
+
+            <a href="paginas/pokemon.html" class="explore-card pokemon-card-bg">
+                <div class="explore-card-icon">
+                    <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="60" height="60">
+                        <circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+                        <path d="M2 30 Q2 2 30 2 Q58 2 58 30 Z" fill="rgba(255,255,255,0.25)"/>
+                        <rect x="2" y="27" width="56" height="6" fill="rgba(0,0,0,0.3)"/>
+                        <circle cx="30" cy="30" r="9" fill="white" stroke="rgba(0,0,0,0.3)" stroke-width="3"/>
+                        <circle cx="30" cy="30" r="4" fill="rgba(230,57,70,0.8)"/>
+                    </svg>
+                </div>
+                <div class="explore-card-content">
+                    <h3>Pokémon</h3>
+                    <p>Explore a coleção completa de Pokémon com suas tipagens, gerações e regiões de origem.</p>
+                    <span class="explore-cta">Ver Pokémon →</span>
+                </div>
+            </a>
+
+            <a href="paginas/tipos.html" class="explore-card tipos-card-bg">
+                <div class="explore-card-icon">
+                    <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="60" height="60">
+                        <polygon points="30,4 56,18 56,42 30,56 4,42 4,18" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                        <text x="30" y="37" font-size="22" text-anchor="middle" fill="white" font-weight="bold">⚡</text>
+                    </svg>
+                </div>
+                <div class="explore-card-content">
+                    <h3>Tipos</h3>
+                    <p>Descubra fraquezas, resistências e imunidades de cada tipo elemental do universo Pokémon.</p>
+                    <span class="explore-cta">Ver Tipos →</span>
+                </div>
+            </a>
+
+            <a href="paginas/treinadores.html" class="explore-card trainers-card-bg">
+                <div class="explore-card-icon">
+                    <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="60" height="60">
+                        <circle cx="30" cy="20" r="12" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                        <path d="M8 52 Q8 36 30 36 Q52 36 52 52" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                        <circle cx="30" cy="20" r="7" fill="rgba(255,255,255,0.5)"/>
+                    </svg>
+                </div>
+                <div class="explore-card-content">
+                    <h3>Treinadores</h3>
+                    <p>Conheça os treinadores cadastrados, suas regiões de origem e anos de experiência.</p>
+                    <span class="explore-cta">Ver Treinadores →</span>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer class="client-footer">
+        <div class="container client-footer-inner">
+            <p>Desenvolvido por: Henry Barcellos</p>
+            <a href="admin/index.html" class="admin-link">Área Admin ⚙</a>
+        </div>
+    </footer>
+
+    <script>
+        function loadStats() {
+            const pokemons    = JSON.parse(localStorage.getItem('pokemons'))    || [];
+            const tipos       = JSON.parse(localStorage.getItem('tipos'))       || [];
+            const treinadores = JSON.parse(localStorage.getItem('treinadores')) || [];
+
+            animateCount('statPoke', pokemons.length);
+            animateCount('statTipo', tipos.length);
+            animateCount('statTrei', treinadores.length);
+        }
+
+        function animateCount(id, target) {
+            const el = document.getElementById(id);
+            if (target === 0) { el.textContent = '0'; return; }
+            let current = 0;
+            const step = Math.ceil(target / 20);
+            const interval = setInterval(() => {
+                current = Math.min(current + step, target);
+                el.textContent = current;
+                if (current >= target) clearInterval(interval);
+            }, 40);
+        }
+
+        loadStats();
+    </script>
+</body>
+</html>
