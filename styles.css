@@ -835,7 +835,7 @@ tbody tr:last-child td {
 /* ---------- Grade de cards genérica ---------- */
 .client-card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -968,8 +968,6 @@ tbody tr:last-child td {
     gap: 12px;
 }
 
-.tipo-section { }
-
 .tipo-label {
     display: flex;
     align-items: center;
@@ -1006,7 +1004,7 @@ tbody tr:last-child td {
 
 /* ---------- Treinadores cards ---------- */
 .trainers-grid {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .trainer-card {
@@ -1174,12 +1172,23 @@ tbody tr:last-child td {
     }
 
     .client-card-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trainers-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .client-footer-inner {
         flex-direction: column;
         gap: 8px;
         text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .client-card-grid,
+    .trainers-grid {
+        grid-template-columns: 1fr;
     }
 }

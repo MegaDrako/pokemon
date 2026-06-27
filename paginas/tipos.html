@@ -88,9 +88,14 @@
             return TYPE_COLORS[nome.toLowerCase().trim()] || '#6B7280';
         }
 
-        function tagList(str, colorClass) {
+        function tagList(str) {
             if (!str || str === '-') return `<span class="tag tag-empty">—</span>`;
-            return str.split(',').map(s => `<span class="tag ${colorClass}">${s.trim()}</span>`).join('');
+            const LIGHT_COLORS = ['#F7D02C','#A8A77A','#E2BF65','#B6A136','#96D9D6','#7AC74C','#B7B7CE','#A6B91A','#89AAE3'];
+            return str.split(',').map(s => {
+                const cor = typeColor(s.trim());
+                const txt = LIGHT_COLORS.includes(cor) ? '#1a1a2e' : '#ffffff';
+                return `<span class="tag" style="background:${cor}; color:${txt}">${s.trim()}</span>`;
+            }).join('');
         }
 
         function listar() {
@@ -121,7 +126,7 @@
 
             grid.innerHTML = filtrados.map(t => {
                 const cor = typeColor(t.nome);
-                const textColor = ['#F7D02C','#A8A77A','#E2BF65','#B6A136','#96D9D6','#7AC74C','#B7B7CE'].includes(cor) ? '#1a1a2e' : '#ffffff';
+                const textColor = '#ffffff';
                 return `
                 <div class="tipo-card">
                     <div class="tipo-card-header" style="background:${cor}; color:${textColor}">
@@ -143,7 +148,7 @@
                                 </svg>
                                 Fraquezas
                             </span>
-                            <div class="tag-list">${tagList(t.fraqueza, 'tag-fraq')}</div>
+                            <div class="tag-list">${tagList(t.fraqueza)}</div>
                         </div>
                         <div class="tipo-section">
                             <span class="tipo-label res-label">
@@ -152,7 +157,7 @@
                                 </svg>
                                 Resistências
                             </span>
-                            <div class="tag-list">${tagList(t.resistencia, 'tag-res')}</div>
+                            <div class="tag-list">${tagList(t.resistencia)}</div>
                         </div>
                         <div class="tipo-section">
                             <span class="tipo-label imu-label">
@@ -161,7 +166,7 @@
                                 </svg>
                                 Imunidades
                             </span>
-                            <div class="tag-list">${tagList(t.imunidade, 'tag-imu')}</div>
+                            <div class="tag-list">${tagList(t.imunidade)}</div>
                         </div>
                     </div>
                 </div>`;
