@@ -90,11 +90,9 @@
 
         function tagList(str) {
             if (!str || str === '-') return `<span class="tag tag-empty">—</span>`;
-            const LIGHT_COLORS = ['#F7D02C','#A8A77A','#E2BF65','#B6A136','#96D9D6','#7AC74C','#B7B7CE','#A6B91A','#89AAE3'];
             return str.split(',').map(s => {
                 const cor = typeColor(s.trim());
-                const txt = LIGHT_COLORS.includes(cor) ? '#1a1a2e' : '#ffffff';
-                return `<span class="tag" style="background:${cor}; color:${txt}">${s.trim()}</span>`;
+                return `<span class="tag" style="background:${cor}">${s.trim()}</span>`;
             }).join('');
         }
 
